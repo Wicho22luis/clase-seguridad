@@ -18,8 +18,8 @@ class ExampleTest extends TestCase
     public function testSum(): void{
         $addition = new OperationsController();
         $this->assertEquals(25, $addition->add(12,13));
-        $this->assertIsInt($addition);
-        $this->assertIsNumeric($addition);
-        $this->assertGreaterThan(0,$addition);
+        $this->assertIsInt($addition->add(12,13));
+        $this->assertIsNumeric($addition->add(12,13));
+        $this->assertGreaterThan(0,$addition->add(12,13));
     }
 }
