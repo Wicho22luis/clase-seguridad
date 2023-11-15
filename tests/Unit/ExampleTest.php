@@ -3,6 +3,7 @@
 namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use App\Http\Controllers\OperationsController;
 
 class ExampleTest extends TestCase
 {
@@ -12,6 +13,13 @@ class ExampleTest extends TestCase
     public function test_that_true_is_true(): void
     {
         $this->assertTrue(true);
-        $this->assertEquals(1,2);
+    }
+
+    public function testSum(): void{
+        $addition = new OperationsController();
+        $this->assertEquals(25, $addition->add(12,13));
+        $this->assertIsInt($addition);
+        $this->assertIsNumeric($addition);
+        $this->assertGreaterThan(0,$addition);
     }
 }
