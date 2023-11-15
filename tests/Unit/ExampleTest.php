@@ -20,6 +20,7 @@ class ExampleTest extends TestCase
         $this->assertEquals(25, $addition->add(12,13));
         $this->assertIsInt($addition->add(12,13));
         $this->assertIsNumeric($addition->add(12,13));
+        $this->assertIsNumeric(50);
         $this->assertGreaterThan(0,$addition->add(12,13));
     }
 }
